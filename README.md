@@ -23,11 +23,11 @@ In the project directory, you can run the following commands to run the project 
 
 ### Menu Page -
 
-<img src="github_images/image3.png" alt="menu" style="width: 70%;">
+<img src="./github_images/image3.png" alt="menu" style="width: 70%;">
 
 ### Cart Page -
 
-<img src="github_images/image4.png" alt="cart" style="width: 70%;">
+<img src="./github_images/image4.png" alt="cart" style="width: 70%;">
 
 ## NOTE -
 
