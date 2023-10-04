@@ -20,6 +20,17 @@ const Cart = () => {
   const handleItemAdd = (item) => {
     dispatch(addItem(item));
   };
+
+  const calculateTotalPrice = () => {
+    return cartData.reduce((total, item) => {
+      return total + item.totalPrice;
+    }, 0);
+  };
+  const [totalPrice, setTotalPrice] = useState(calculateTotalPrice());
+  useEffect(() => {
+    setTotalPrice(calculateTotalPrice());
+  }, [cartData]);
+
   if (cartData.length === 0) {
     return (
       <div className="w-6/12 m-auto">
@@ -59,21 +70,24 @@ const Cart = () => {
               <h1 className="font-semibold">{item.card.info.name}</h1>
               <p className="text-gray-400">{item.card.info.description}</p>
             </div>
-            <div className="w-2/12 flex flex-col items-center">
+            <div className="w-2/12 flex flex-col items-center ">
               <div>
-                <p className="font-semibold text-gray-600">
+                <p className="font-semibold text-gray-600 mb-2">
                   Rs.{" "}
-                  {(item.card.info.price / 100 ||
-                    item?.card?.info?.defaultPrice / 100) * item.quantity}
+                  {(parseFloat(item.card.info.price / 100).toFixed(2) ||
+                    parseFloat(item?.card?.info?.defaultPrice / 100).toFixed(
+                      2
+                    )) * item.quantity}
                 </p>
               </div>
-              <div className="w-full flex justify-center">
+              <div className="w-full flex justify-center gap-2">
                 <button
                   onClick={() => handleItemRemove(item)}
                   className="text-normal bg-red-500 text-white font-bold mr-1 px-3 py-1 rounded-lg transition-all hover:scale-90 "
                 >
                   -
                 </button>
+                <div className="text-gray-500 font-bold">{item.quantity}</div>
                 <button
                   onClick={() => handleItemAdd(item)}
                   className="text-normal bg-red-500 text-white font-bold ml-1 px-3 py-1 rounded-lg transition-all hover:scale-90 "
@@ -84,6 +98,11 @@ const Cart = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="w-7/12 m-auto flex justify-end">
+        <h1 className="font-bold p-2 m-2 text-lg bg-slate-200 rounded-lg">
+          Total - {totalPrice}
+        </h1>
       </div>
       <div className="w-7/12 m-auto flex justify-end">
         <button

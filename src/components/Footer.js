@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = React.forwardRef((props, ref) => {
   return (
-    <div ref={ref} className="bg-indigo-950 mt-7 text-white">
+    <div ref={ref} className="bg-indigo-950 text-white">
       <div className="w-6/12 m-auto text-center mb-10">
         <h1 className="text-4xl pt-6 pb-1 font-semibold">Fake Swiggy</h1>
         <p className="text-gray-400 text-xl font-bold">

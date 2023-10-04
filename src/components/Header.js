@@ -20,7 +20,7 @@ const Header = ({ onAboutClick }) => {
   };
 
   return (
-    <div className="flex justify-between shadow-lg px-4 items-center bg-gradient-to-b from-rose-300 to-rose-100 ">
+    <div className="flex justify-between shadow-lg px-4 items-center bg-gradient-to-b from-white to-gray-100 mb-4">
       <div className="logo-container">
         <Link to="/">
           <img
@@ -30,8 +30,8 @@ const Header = ({ onAboutClick }) => {
         </Link>
       </div>
       <div className="flex">
-        <ul className="flex p-4 m-4 items-center">
-          <li className="px-4 hover:text-red-600 transition-transform hover:scale-110 cursor-pointer">
+        <ul className="flex p-4 m-4 items-center font-sans gap-4">
+          <li className="px-4 transition-all hover:scale-110 hover:text-red-600 cursor-pointer ">
             <Link to="/">
               <i className="fa-solid fa-house"></i>
               {" Home"}

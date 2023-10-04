@@ -65,8 +65,8 @@ const Body = () => {
   }
 
   return (
-    <div className="body mx-10 ">
-      <div className="flex justify-between my-6">
+    <div className="body mx-10 py-4">
+      <div className="flex justify-between">
         <div>
           <button
             className="transition-all px-4 mx-2 my-2 py-1 bg-red-300 hover:bg-red-400 hover:scale-105  rounded-lg"
