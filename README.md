@@ -1,6 +1,6 @@
 # FakeSwiggy 🔥🐱
 
-A project built with **React, Redux, Tailwind** on the user interface and **SWIGGY API WITH CORS Extention for google chrome** to provide a food ordering application for the users.
+A project built with **React, Redux, Tailwind** on the user interface, and **SWIGGY API WITH CORS extension for Google Chrome** to provide a food ordering application for the users.
 
 ## Technologies Used -
 
