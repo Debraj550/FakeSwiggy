@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import useRestaurantMenu from "../utils/useRestaurantmenu";
+import useRestaurantMenu from "../utils/useRestaurantMenu";
 import ItemList from "./ItemList";
 import { useState } from "react";
 import Lottie from "lottie-react";
