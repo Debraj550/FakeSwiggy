@@ -10,7 +10,7 @@ A project built with **React, Redux, Tailwind** on the user interface, and **SWI
 
 ## Live Demo Link 🚀
 
-### `Upcoming`
+### `https://fake-swiggy.vercel.app/`
 
 ## Setup Guide -
 
