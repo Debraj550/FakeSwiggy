@@ -59,6 +59,19 @@ const Body = () => {
   if (allRestaurants.length === 0) {
     return (
       <div className="w-3/12 m-auto">
+        <div className="text-lg font-bold flex flex-col items-center justify-center">
+          <h1 className="text-center">
+            If the loading continues for more than 5 seconds, Kindly install
+            "Allow CORS Extension"
+          </h1>
+          <Link
+            to={"https://shorturl.at/yAOW9"}
+            className="text-blue-600 text-center"
+          >
+            Click Here to Add the extension
+          </Link>
+        </div>
+
         <Lottie animationData={loadingRestaurantsSpiner}></Lottie>
       </div>
     );
